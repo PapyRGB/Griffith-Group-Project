@@ -1,4 +1,7 @@
+import sys
 import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 from src.document_loader import load_docx, load_pdf, chunk_text
 
 def test_chunk_text():
