@@ -11,7 +11,7 @@ st.set_page_config(page_title="Griffith College Assistant", page_icon="📚")
 st.title("📚 Griffith College Document Assistant")
 
 # Hide pages menu
-@st.cache_data()
+@st.cache_resource()
 def hide_pages_menu():
     # Final CSS: hide sidebar, nav, toggle control, and spacer
     hide_sidebar_completely = """
@@ -36,7 +36,7 @@ def hide_pages_menu():
     st.markdown(hide_sidebar_completely, unsafe_allow_html=True)
 
 # Backend loader
-@st.cache_data(show_spinner="Loading backend...")
+@st.cache_resource(show_spinner="Loading backend...")
 def load_resources():
     _ = retrieve("test")
     return "Backend ready"
