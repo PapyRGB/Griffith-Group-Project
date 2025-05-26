@@ -6,3 +6,5 @@ numpy
 python-docx
 pymupdf
 pytest
+dotenv
+huggingface-hub
