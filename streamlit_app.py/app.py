@@ -10,30 +10,27 @@ from src.hf_model import query_huggingface_chat
 st.set_page_config(page_title="Griffith College Assistant", page_icon="📚")
 st.title("📚 Griffith College Document Assistant")
 
-# Hide pages menu
-@st.cache_resource()
-def hide_pages_menu():
-    # Final CSS: hide sidebar, nav, toggle control, and spacer
-    hide_sidebar_completely = """
-        <style>
-            /* Hide sidebar entirely */
-            [data-testid="stSidebar"] {
-                display: none !important;
-            }
+# Final CSS: hide sidebar, nav, toggle control, and spacer
+hide_sidebar_completely = """
+    <style>
+        /* Hide sidebar entirely */
+        [data-testid="stSidebar"] {
+            display: none !important;
+        }
 
-            /* Hide sidebar toggle/collapse control */
-            [data-testid="stSidebarCollapsedControl"] {
-                display: none !important;
-            }
+        /* Hide sidebar toggle/collapse control */
+        [data-testid="stSidebarCollapsedControl"] {
+            display: none !important;
+        }
 
-            /* Optional: reset main padding if needed */
-            [data-testid="stAppViewContainer"] > div:first-child {
-                padding-left: 0rem !important;
-            }
-        </style>
-    """
+        /* Optional: reset main padding if needed */
+        [data-testid="stAppViewContainer"] > div:first-child {
+            padding-left: 0rem !important;
+        }
+    </style>
+"""
 
-    st.markdown(hide_sidebar_completely, unsafe_allow_html=True)
+st.markdown(hide_sidebar_completely, unsafe_allow_html=True)
 
 # Backend loader
 @st.cache_resource(show_spinner="Loading backend...")
