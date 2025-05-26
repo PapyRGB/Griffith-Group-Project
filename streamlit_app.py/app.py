@@ -1,47 +1,75 @@
 # streamlit_app.py
-import os
-import sys
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-
+import os, sys
 import streamlit as st
-from src.retriever import retrieve
-from src.hf_model import query_huggingface
 
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+from src.retriever import retrieve
+from src.hf_model import query_huggingface_chat
+
+st.set_page_config(page_title="Griffith College Assistant", page_icon="📚")
 st.title("📚 Griffith College Document Assistant")
 
-# Cache backend resources (e.g., index loading, embedding model)
+# Backend loader
 @st.cache_data(show_spinner="Loading backend...")
 def load_resources():
-    _ = retrieve("test")  # warm-up call to build FAISS/retriever once
+    _ = retrieve("test")
     return "Backend ready"
 
-# Load resources once (cached)
-st.success(load_resources())
+backend_status = load_resources()
+st.success(backend_status)
 
-# Initialize Q&A history
+# Confirm clear cache → route to clear_cache.py
 if "history" not in st.session_state:
     st.session_state.history = []
 
-# User query input
-query = st.text_input("Enter your question:")
+with st.expander("⚙️ Maintenance Actions"):
+    col1, col2 = st.columns(2)
 
-if st.button("Ask") and query:
+    with col1:
+        if st.button("🧹 Clear Cache"):
+            st.session_state.confirm_clear_cache = True
+
+    with col2:
+        if st.button("♻️ Reset Backend Resources"):
+            st.session_state.confirm_reset_resources = True
+
+# Confirm dialogs
+if st.session_state.get("confirm_clear_cache"):
+    st.warning("This will fully clear the cache and restart the app.")
+    if st.button("✅ Yes, clear cache now"):
+        st.switch_page("pages/_clear_cache.py")  # Go to the clear_cache route
+    if st.button("❌ Cancel", key="cancel_clear"):
+        del st.session_state["confirm_clear_cache"]
+        st.rerun()
+
+if st.session_state.get("confirm_reset_resources"):
+    st.warning("This will clear backend resources and reload them.")
+    if st.button("✅ Yes, reset backend"):
+        st.cache_data.clear()
+        st.session_state.clear()
+        st.success("Backend resources cleared.")
+        st.rerun()
+    if st.button("❌ Cancel", key="cancel_reset"):
+        del st.session_state["confirm_reset_resources"]
+        st.rerun()
+
+# Chat history
+for role, content in st.session_state.history:
+    with st.chat_message(role):
+        st.markdown(content)
+
+if user_query := st.chat_input("Ask a question about Griffith College documents..."):
+    with st.chat_message("user"):
+        st.markdown(user_query)
+
     with st.spinner("Thinking..."):
-        top_chunks = retrieve(query)
+        top_chunks = retrieve(user_query)
         context = "\n".join(top_chunks)
-        prompt = f"Use this context to answer:\n{context}\n\nQuestion: {query}"
-        answer = query_huggingface(prompt)
+        prompt = f"Use this context to answer:\n{context}\n\nQuestion: {user_query}"
+        answer = query_huggingface_chat(prompt)
 
-        # Store Q&A in session history
-        st.session_state.history.append((query, answer))
+    with st.chat_message("assistant"):
+        st.markdown(answer)
 
-        st.markdown("### Answer")
-        st.write(answer)
-
-# Show previous Q&A
-if st.session_state.history:
-    st.markdown("---")
-    st.markdown("### 🧠 Conversation History")
-    for i, (q, a) in enumerate(reversed(st.session_state.history), 1):
-        st.markdown(f"**Q{i}:** {q}")
-        st.markdown(f"**A{i}:** {a}")
+    st.session_state.history.append(("user", user_query))
+    st.session_state.history.append(("assistant", answer))
