@@ -2,7 +2,30 @@
 import streamlit as st
 import time
 
+# Set page configuration
 st.set_page_config(page_title="Clearing Cache...", page_icon="🧹")
+
+# Final CSS: hide sidebar, nav, toggle control, and spacer
+hide_sidebar_completely = """
+    <style>
+        /* Hide sidebar entirely */
+        [data-testid="stSidebar"] {
+            display: none !important;
+        }
+
+        /* Hide sidebar toggle/collapse control */
+        [data-testid="stSidebarCollapsedControl"] {
+            display: none !important;
+        }
+
+        /* Optional: reset main padding if needed */
+        [data-testid="stAppViewContainer"] > div:first-child {
+            padding-left: 0rem !important;
+        }
+    </style>
+"""
+
+st.markdown(hide_sidebar_completely, unsafe_allow_html=True)
 
 st.title("🧹 Clearing Cache")
 st.write("Please wait while we reset the cache and restart the assistant...")
