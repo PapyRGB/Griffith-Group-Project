@@ -6,8 +6,19 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from src.retriever import retrieve
 from src.hf_model import query_huggingface_chat
 
+# Set page configuration
 st.set_page_config(page_title="Griffith College Assistant", page_icon="📚")
 st.title("📚 Griffith College Document Assistant")
+
+# Hide Streamlit's pages menu (sidebar navigation)
+hide_pages_menu = """
+    <style>
+        [data-testid="stSidebarNav"] {
+            display: none;
+        }
+    </style>
+"""
+st.markdown(hide_pages_menu, unsafe_allow_html=True)
 
 # Backend loader
 @st.cache_data(show_spinner="Loading backend...")
