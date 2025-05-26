@@ -10,14 +10,21 @@ from src.hf_model import query_huggingface_chat
 st.set_page_config(page_title="Griffith College Assistant", page_icon="📚")
 st.title("📚 Griffith College Document Assistant")
 
-# Hide Streamlit's pages menu (sidebar navigation)
+# Completely hide the sidebar (not just the nav inside it)
 hide_pages_menu = """
     <style>
-        [data-testid="stSidebarNav"] {
+        /* Hide the sidebar and its toggle */
+        [data-testid="stSidebar"] {
             display: none;
+        }
+
+        /* Expand main content to full width */
+        [data-testid="stAppViewContainer"] > div:first-child {
+            padding-left: 0rem;
         }
     </style>
 """
+
 st.markdown(hide_pages_menu, unsafe_allow_html=True)
 
 # Backend loader
