@@ -3,3 +3,8 @@ requests
 faiss-cpu
 sentence-transformers
 numpy
+python-docx
+pymupdf
+pytest
+dotenv
+huggingface-hub
