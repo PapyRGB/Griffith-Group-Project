@@ -73,10 +73,7 @@ if st.session_state.get("confirm_clear_cache"):
 if st.session_state.get("confirm_reset_resources"):
     st.warning("This will clear backend resources and reload them.")
     if st.button("✅ Yes, reset backend"):
-        st.cache_resource.clear()
-        st.session_state.clear()
-        st.success("Backend resources cleared.")
-        st.rerun()
+        st.switch_page("pages/_clear_resource.py")  # Go to the clear_resource route
     if st.button("❌ Cancel", key="cancel_reset"):
         del st.session_state["confirm_reset_resources"]
         st.rerun()
