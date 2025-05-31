@@ -15,8 +15,17 @@ client = InferenceClient(
     provider="nebius",  # Remove this line if you're not using Nebius
 )
 
+system_instructions = (
+    "You are an AI assistant designed to answer questions strictly based on the content provided "
+    "from two specific documents: 'Admin Info.docx' and 'Griffith College Student Handbook 2024-25'. "
+    "Your responses must be grounded only in the content extracted from these documents through "
+    "retrieval-augmented generation (RAG). Do not attempt to answer questions based on prior knowledge, "
+    "external sources, assumptions, or general information. If the context provided does not contain enough "
+    "information to answer the user's question, respond with: 'I'm sorry, I do not have enough information to answer that question based on the provided documents.'"
+)
+
 # Query function using chat-style messages
-def query_huggingface_chat(prompt: str, system_message: str = None) -> str:
+def query_huggingface_chat(prompt: str, system_message: str = system_instructions) -> str:
     messages = []
 
     if system_message:
