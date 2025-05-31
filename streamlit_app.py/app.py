@@ -83,7 +83,7 @@ for role, content in st.session_state.history:
     with st.chat_message(role):
         st.markdown(content)
 
-if user_query := st.chat_input("Ask a question about Griffith College documents..."):
+if user_query := st.chat_input("Ask a question about Griffith College documentation..."):
     with st.chat_message("user"):
         st.markdown(user_query)
 
