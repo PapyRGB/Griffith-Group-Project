@@ -63,7 +63,7 @@ def write_result(md_path, question, answer, index, evaluation):
         f.write(f"**RAG Answer:**\n{answer}\n\n")
         f.write(f"**Evaluation (automatic):**\n{evaluation}\n\n")
         f.write("**Human Evaluation**  \n")
-        f.write("_Check one of the following:_  \n\n")
+        f.write("_Keep one of the following:_  \n\n")
         f.write("- [ ] ✅ Correct — Fully answers the question based on context.  \n")
         f.write("- [ ] 🟡 Partially correct — Some accurate info, but incomplete or unclear.  \n")
         f.write("- [ ] ❌ Incorrect — Answer is wrong or unsupported by context.\n\n")
