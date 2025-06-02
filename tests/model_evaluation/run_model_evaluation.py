@@ -9,8 +9,24 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')
 from src.retriever import retrieve
 from src.hf_model import query_huggingface_chat
 
+print("\n📝 Available files in tests/model_evaluation/:")
+for f in os.listdir("tests/model_evaluation"):
+    if f.endswith(".json"):
+        print(f"  - {f}")
+
+print("\n")
+questions_filename = input("📂 Enter the name of the JSON file to use for testing questions: ").strip()
+QUESTIONS_PATH = Path(f"tests/model_evaluation/{questions_filename}")
 RESULTS_PATH = Path("tests/model_evaluation/results.md")
-QUESTIONS_PATH = Path("tests/model_evaluation/evaluation_question_1.json")
+
+if not QUESTIONS_PATH.exists():
+    print(f"\n🚫 File '{questions_filename}' not found. Please check the filename and try again.")
+    exit(1)
+
+print(f"\n✅ Using question file: {questions_filename}")
+
+RESULTS_PATH = Path("tests/model_evaluation/results.md")
+QUESTIONS_PATH = Path(f"tests/model_evaluation/{questions_filename}")
 
 
 def load_questions(path):
