@@ -8,20 +8,18 @@
 ## Question 1: What is the process for registration at Griffith College?
 
 **RAG Answer:**
-To register at Griffith College, you need to follow these steps:
+To register at Griffith College, you should follow these steps:
 
-1. **Access the Registration Portal**: Go to my.griffith.ie and log in with your Single Sign-On details.
-2. **Follow Instructions**: Complete the registration process by following the instructions provided on the portal.
-3. **Complete Registration**: Once fully registered, you will have access to College Resources.
-4. **Contact for Difficulties**: Should you face any issues with a particular module, reach out to your lecturer.
+1. **Access the Registration Portal**: Go to my.griffith.ie and log in using your provided log-in details.
+2. **Follow the Instructions**: Complete the registration process by following the instructions provided on the portal.
+3. **Complete Registration**: Once fully registered, you will have access to college resources and can pay your fees, check your personal details, and access information relating to your program.
 
-Additionally, the Registration Department at Griffith College ensures that all records relating to your studies are accurate and complete.
+If you encounter any difficulties with a particular module, your lecturer should be the first person you contact.
+
+Additionally, if you need to make changes to your registration, such as module changes or updates to your attendance records, you should use the Learner Record Amendment Form (LRAF). The Registration Department ensures that Griffith College has full and accurate records relating to your studies.
 
 **Evaluation (automatic):**
-**Rating:** Partially correct
-
-**Explanation:**
-The student correctly identifies the registration portal and the general steps for registration based on the provided context from 'Admin Info.doc' and 'Griffith College Student Handbook 2024-25', but it skips over additional details like the necessary actions regarding payments and personal information.
+The student's answer is "Partially correct" because while the student provides a general outline of the registration process, they do not mention key details, such as the need to access my.griffith.ie for verifying program details and to correct, they imply that the portal is explicitly for registration when it mentions other tasks along with registration.
 
 **Human Evaluation**  
 _Keep one of the following:_  
@@ -37,11 +35,16 @@ _Keep one of the following:_
 ## Question 2: Who are the computing faculty administrators?
 
 **RAG Answer:**
-The computing faculty administrators are Aisling Farrell (aisling.farrell@griffith.ie, 01 – 415 0428) and Tina Kulojevic (tina.kulojevic@griffith.ie, 01 – 416 3329).
+The computing faculty administrators are Aisling Farrell and Tina Kulojevic.
+
+You can contact:
+- Aisling Farrell at aisling.farrell@griffith.ie or by phone at 01 – 415 0428
+- Tina Kulojevic at tina.kulojevic@griffith.ie or by phone at 01- 416 3329
 
 **Evaluation (automatic):**
-**Rating:** Correct
-**Explanation:** The answer accurately lists the names, email addresses, and phone numbers of the computing faculty administrators as provided in the context.
+**Rating: Correct**
+
+**Explanation:** The answer accurately identifies the computing faculty administrators and provides their correct contact information as listed in the context.
 
 **Human Evaluation**  
 _Keep one of the following:_  
@@ -59,16 +62,13 @@ _Keep one of the following:_
 **RAG Answer:**
 If you lose access to Moodle, it is likely due to one of the following reasons:
 
-1. **Fees Issue**: There might be an outstanding fees issue. In this case, you should contact the fees office at studentfees@griffithcollege.ie.
+- There may be an issue with your fees. In this case, you should contact the fees office at studentfees@griffithcollege.ie
+- You need to register for the new academic year. An email with a registration link is sent to you for this purpose. After registration, if you still do not have access to Moodle or are missing modules, you should email your course administrator.
 
-2. **Technical Issues**: If it's not a fees issue, there might be a technical problem. To resolve this, you should first wait for 48 hours after registration. If you still do not have access to Moodle or are missing modules, you should email your course administrator.
-
-Additionally, if you need to arrange a Zoom meeting or have other queries, you can contact the relevant support services as needed.
+Additionally, if you need to access library services and resources, you can do so through the main Library website. You will need your Moodle username and password to access eBooks and other online resources.
 
 **Evaluation (automatic):**
-**Rating: Partially correct**
-
-The answer correctly identifies the possibility of a fees issue and the need to contact the appropriate office, but it incorrectly attributes a "technical problem" as a general cause without specifying the context of post-registration access issues mentioned in the source.
+The answer is rated as **"Correct"** because it accurately reflects specific content about losing access to Moodle, including the reasons and steps provided in the context of the retrieved content based on the two documents, including the correct email addresses and instructions.
 
 **Human Evaluation**  
 _Keep one of the following:_  
@@ -84,11 +84,11 @@ _Keep one of the following:_
 ## Question 4: How can I request an official transcript?
 
 **RAG Answer:**
-To request an official transcript, you should contact your Faculty Administrator. Transcripts of results are issued by the Faculty Administrator in hard copy upon completion of your program. Please allow a minimum of 72 hours (3 working days) for transcript requests to be processed. If you have any questions or need further assistance, kindly refer to the full documentation provided by the Faculty Administrator.
+To request an official transcript, you should contact your Faculty Administrator. Transcripts of results are issued by them in hard copy, upon completion of your program.
 
 **Evaluation (automatic):**
-Rating: Partially correct
-Explanation: The answer correctly indicates that you should contact your Faculty Administrator and allows for the processing time, but it does not mention that transcripts are issued in hard copy upon completion of your program.
+Rating: Correct
+Explanation: The answer accurately reflects the information that "Transcripts of results are issued by your Faculty Administrator, in hard copy, on completion of your programme."
 
 **Human Evaluation**  
 _Keep one of the following:_  
@@ -104,11 +104,11 @@ _Keep one of the following:_
 ## Question 5: What is the Wi-Fi password on campus?
 
 **RAG Answer:**
-The provided context does not specify the Wi-Fi password for the campus. However, it mentions that Griffith College uses the Eduroam Wi-Fi network. For instructions on how to connect to the Eduroam Wi-Fi network, including any required credentials, you can visit griffith.ie/it or see the "Eduroam WiFi network and how to connect to it automatically" section on the student handbook for more details.
+I'm sorry, I do not have enough information to answer that question based on the provided documents.
 
 **Evaluation (automatic):**
-**Rating: "Partially Correct"**
-The student correctly identifies that the Eduroam Wi-Fi network is used and refers to the correct sources for further information. However, the student does not explicitly state the Wi-Fi password, which is indirectly mentioned as the user's date of birth in the context.
+### Rating: Incorrect
+Reason: The context provided does mention the need for a password to access the Eduroam Wi-Fi network but states that the student's username and password will be required to connect, which are typically the student’s email and date of birth but does not explicitly state the Wi-Fi password.
 
 **Human Evaluation**  
 _Keep one of the following:_  
@@ -124,10 +124,12 @@ _Keep one of the following:_
 ## Question 6: Where can I find information about my timetable?
 
 **RAG Answer:**
-According to the Griffith College Student Handbook 2024-25, you should be able to find information about your timetable in the 'Timetables and Academic Calendar' section of the handbook. Additionally, if you need further assistance, you might also want to contact the Academic Administration, which manages processes related to registration, among other things.
+You can find information about your timetable in the "Timetables and Academic Calendar" section mentioned in the Griffith College Student Handbook.
 
 **Evaluation (automatic):**
-The answer is "Correct" - The student accurately identified that the information on timetables is provided in the 'Timetables and Academic Calendar' section as mentioned in the Griffith College Student Handbook 2024-25.
+**Rating: Correct**
+
+The student correctly identifies the relevant section in the "Griffith College Student Handbook" where information about the timetable can be found, based on the context provided.
 
 **Human Evaluation**  
 _Keep one of the following:_  
@@ -143,10 +145,10 @@ _Keep one of the following:_
 ## Question 7: How do I defer a module at Griffith?
 
 **RAG Answer:**
-Based on the provided documents, there is no information about how to defer a module at Griffith College. Please consult directly with your academic support services for that information.
+I'm sorry, I do not have enough information to answer that question based on the provided documents.
 
 **Evaluation (automatic):**
-Inorrect. The student appears not have used any of the information provided from either document.
+Incorrect. The response should indicate that the information is not provided in the documents, not that there is not enough information to answer.
 
 **Human Evaluation**  
 _Keep one of the following:_  
@@ -162,15 +164,18 @@ _Keep one of the following:_
 ## Question 8: What is the minimum pass mark for modules?
 
 **RAG Answer:**
-The minimum pass mark for modules is normally 40% but some programmes (including postgraduate programmes) have a 50% pass mark.
-Please refer to your Programme Handbook or contact your faculty administrator to find out the pass mark specific to your programme.
+To determine the minimum pass mark for modules, you need to refer to your specific programme. In general:
+
+- For many programs, the pass mark is 40%.
+- In some programs, including postgraduate programs, the pass mark is 50%.
+
+You can find the specific pass mark for your modules by checking your Programme Handbook or by contacting your Faculty Administrator. In order to pass a module, you must achieve the minimum pass mark in each module, ensuring that you meet the criteria defined in your Programme Handbook.
+
+Additionally, for modules assessed by more than one component (such as assignments, projects, or examinations), you typically need to pass each component individually. For more detailed information, refer to the approved programme schedule as outlined in your programme handbook.
 
 **Evaluation (automatic):**
-Partially correct.
-
-The student mentioned that "some programmes" require 50% pass mark, but did not specify that all postgraduate programmes require 50%.
-Also, did not specify that if the Borders mentioned in the question (applies for the Borders) (students may cross state borders) and under other special conditions(applies for the borders) some programmes have 40% Mark.
-The conditions weren't mentioned
+**Rating**: Correct.
+This assessment is accurate as the provided passages explicitly delineate the minimum pass mark for modules, differentiating between 40% and 50% thresholds, and their applicability based on the specific programme.
 
 **Human Evaluation**  
 _Keep one of the following:_  
@@ -186,12 +191,12 @@ _Keep one of the following:_
 ## Question 9: What does the Appeals process involve?
 
 **RAG Answer:**
-**Error:** 402 Client Error: Payment Required for url: https://router.huggingface.co/nebius/v1/chat/completions (Request ID: Root=1-683f3811-29abea1c4d269c0920d3f39d;effcc319-9396-4596-91f1-1a009c6662fb)
+**Error:** 402 Client Error: Payment Required for url: https://router.huggingface.co/nebius/v1/chat/completions (Request ID: Root=1-683f3d29-159cec3c525277f12c3dabbc;90d41490-62c3-4cd6-a7b5-bb2cfcefb6e7)
 
 You have exceeded your monthly included credits for Inference Providers. Subscribe to PRO to get 20x more monthly included credits.
 
 **Evaluation (automatic):**
-**Evaluation Error:** 402 Client Error: Payment Required for url: https://router.huggingface.co/nebius/v1/chat/completions (Request ID: Root=1-683f3811-21f633f920a9614a294a4db8;0db1bab0-5786-48ce-8eb9-58217524563b)
+**Evaluation Error:** 402 Client Error: Payment Required for url: https://router.huggingface.co/nebius/v1/chat/completions (Request ID: Root=1-683f3d29-0659411c00ccda9b0dc84077;5a7b0ede-99e4-4e51-83d8-af7605eea216)
 
 You have exceeded your monthly included credits for Inference Providers. Subscribe to PRO to get 20x more monthly included credits.
 
@@ -209,12 +214,12 @@ _Keep one of the following:_
 ## Question 10: How can international students register with immigration?
 
 **RAG Answer:**
-**Error:** 402 Client Error: Payment Required for url: https://router.huggingface.co/nebius/v1/chat/completions (Request ID: Root=1-683f3811-0d42ce8a7812905a229c0586;4537052f-55ed-4998-9919-9b6b59cc1121)
+**Error:** 402 Client Error: Payment Required for url: https://router.huggingface.co/nebius/v1/chat/completions (Request ID: Root=1-683f3d29-2e3295ed59e32c2e0fee9cd7;e30b44bf-f449-4a95-9912-81b40f4a0f59)
 
 You have exceeded your monthly included credits for Inference Providers. Subscribe to PRO to get 20x more monthly included credits.
 
 **Evaluation (automatic):**
-**Evaluation Error:** 402 Client Error: Payment Required for url: https://router.huggingface.co/nebius/v1/chat/completions (Request ID: Root=1-683f3812-446485630bd45b2b26c16dc8;69d9fcb4-2c4e-46e7-8cd7-500be37fadb5)
+**Evaluation Error:** 402 Client Error: Payment Required for url: https://router.huggingface.co/nebius/v1/chat/completions (Request ID: Root=1-683f3d29-74b7d1b134d204b05a221da8;812db742-a246-40b8-8584-2842614763b4)
 
 You have exceeded your monthly included credits for Inference Providers. Subscribe to PRO to get 20x more monthly included credits.
 
