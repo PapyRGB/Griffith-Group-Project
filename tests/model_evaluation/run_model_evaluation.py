@@ -28,6 +28,11 @@ print(f"\n✅ Using question file: {questions_filename}")
 RESULTS_PATH = Path("tests/model_evaluation/results.md")
 QUESTIONS_PATH = Path(f"tests/model_evaluation/{questions_filename}")
 
+def count_question_headers(file_path):
+    with open(file_path, 'r', encoding='utf-8') as f:
+        content = f.read()
+    return content.count("## Question")
+
 
 def load_questions(path):
     print(f"🔍 Loading questions from: {path}")
@@ -86,15 +91,28 @@ def write_result(md_path, question, answer, index, evaluation):
         f.write("---\n\n")
 
 
+def initialize_results_file(md_path):
+    if md_path.exists() and md_path.stat().st_size == 0:
+        with open(md_path, "w", encoding="utf-8") as f:
+            f.write("<!-- markdownlint-disable MD033 -->\n\n")
+            f.write("# Model evaluation\n\n")
+            f.write("---\n")
+
+
 def main():
     if not QUESTIONS_PATH.exists():
         print(f"🚫 Question file not found: {QUESTIONS_PATH}")
         return
-
+    
+    initialize_results_file(RESULTS_PATH)
+    
+    INITIAL_QUESTIONS_INDEX = count_question_headers(RESULTS_PATH)
+    print(INITIAL_QUESTIONS_INDEX)
     questions = load_questions(QUESTIONS_PATH)
     print(f"✅ {len(questions)} questions loaded.\n")
 
     for idx, item in enumerate(questions):
+        idx += INITIAL_QUESTIONS_INDEX
         question = item.get("question")
         if not question:
             print(f"⚠️ Skipping invalid entry at index {idx}")
