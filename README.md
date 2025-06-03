@@ -92,8 +92,8 @@ Griffith-Group-Project/
 
 ## 👥 Team Group 1
 
-- Maxime Viel
-- Benoît Catez
+- [Maxime Viel](https://github.com/PapyRGB)
+- [Benoît Catez](https://github.com/LimuleSempai)
 
 ---
 
