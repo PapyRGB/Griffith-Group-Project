@@ -79,7 +79,7 @@ Then briefly explain why in one line.
 def write_result(md_path, question, answer, index, evaluation):
     print(f"📝 Writing result for Question {index + 1} to {md_path.name}")
     with open(md_path, "a", encoding="utf-8") as f:
-        f.write("\n\n")
+        #f.write("\n\n")
         f.write(f"## Question {index + 1}: {question}\n\n")
         f.write(f"**RAG Answer:**\n{answer}\n\n")
         f.write(f"**Evaluation (automatic):**\n{evaluation}\n\n")
@@ -96,7 +96,7 @@ def initialize_results_file(md_path):
         with open(md_path, "w", encoding="utf-8") as f:
             f.write("<!-- markdownlint-disable MD033 -->\n\n")
             f.write("# Model evaluation\n\n")
-            f.write("---\n")
+            f.write("---\n\n")
 
 
 def main():
