@@ -9,5 +9,4 @@ jobs:
       with:
         fix: true
         globs: |
-          *.md
           !test/model_evaluation/*.md
