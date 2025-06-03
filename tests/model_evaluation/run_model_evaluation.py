@@ -10,13 +10,13 @@ from src.retriever import retrieve
 from src.hf_model import query_huggingface_chat
 
 print("\n📝 Available files in tests/model_evaluation/:")
-for f in os.listdir("tests/model_evaluation"):
+for f in os.listdir("tests/model_evaluation/questions"):
     if f.endswith(".json"):
         print(f"  - {f}")
 
 print("\n")
 questions_filename = input("📂 Enter the name of the JSON file to use for testing questions: ").strip()
-QUESTIONS_PATH = Path(f"tests/model_evaluation/{questions_filename}")
+QUESTIONS_PATH = Path(f"tests/model_evaluation/questions/{questions_filename}")
 RESULTS_PATH = Path("tests/model_evaluation/results.md")
 
 if not QUESTIONS_PATH.exists():
@@ -26,7 +26,7 @@ if not QUESTIONS_PATH.exists():
 print(f"\n✅ Using question file: {questions_filename}")
 
 RESULTS_PATH = Path("tests/model_evaluation/results.md")
-QUESTIONS_PATH = Path(f"tests/model_evaluation/{questions_filename}")
+QUESTIONS_PATH = Path(f"tests/model_evaluation/questions/{questions_filename}")
 
 def count_question_headers(file_path):
     with open(file_path, 'r', encoding='utf-8') as f:
@@ -107,7 +107,6 @@ def main():
     initialize_results_file(RESULTS_PATH)
     
     INITIAL_QUESTIONS_INDEX = count_question_headers(RESULTS_PATH)
-    print(INITIAL_QUESTIONS_INDEX)
     questions = load_questions(QUESTIONS_PATH)
     print(f"✅ {len(questions)} questions loaded.\n")
 
