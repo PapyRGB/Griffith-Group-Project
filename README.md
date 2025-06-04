@@ -8,6 +8,13 @@ This project implements a **Retrieval-Augmented Generation (RAG) assistant** tai
 
 ---
 
+## 📺 Live Demo
+
+Access the deployed app here:  
+👉 [**griffith-group-project.streamlit.app**](https://griffith-group-project.streamlit.app/)
+
+---
+
 ## 🏗️ Project Overview
 
 - **Goal:** Assist Griffith College students by enabling natural language queries over static academic documents.
