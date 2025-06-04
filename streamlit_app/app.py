@@ -90,6 +90,7 @@ if user_query := st.chat_input("Ask a question about Griffith College documentat
     with st.spinner("Thinking..."):
         top_chunks = retrieve(user_query)
         context = "\n".join(top_chunks)
+        print(context)
         prompt = f"Use this context to answer:\n{context}\n\nQuestion: {user_query}"
         answer = query_huggingface_chat(prompt)
 
