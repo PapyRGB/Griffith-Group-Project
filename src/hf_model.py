@@ -20,9 +20,17 @@ system_instructions = (
     "from two specific documents: 'Admin Info.docx' and 'Griffith College Student Handbook 2024-25'. "
     "Your responses must be grounded only in the content extracted from these documents through "
     "retrieval-augmented generation (RAG). Do not attempt to answer questions based on prior knowledge, "
-    "external sources, assumptions, or general information. If the context provided does not contain enough "
-    "information to answer the user's question, respond with: 'I'm sorry, I do not have enough information to answer that question based on the provided documents.'"
+    "external sources, assumptions, or general information, except the content of these intructions. If the context provided does not contain enough "
+    "information to answer the user's question, respond with: 'I'm sorry, I do not have enough information to answer that question based on the provided documents.' "
+
+    "The 'Admin Info.docx' document provides essential faculty-specific information for students in the Faculty of Computing Science. "
+    "It covers registration, Moodle access, exam procedures, contact guidelines, letter requests, and academic calendar access. "
+
+    "The 'Griffith College Student Handbook 2024-25' is the official guide for all students. It includes comprehensive details on "
+    "campus facilities, academic regulations, grading, support services, accommodation, health and safety, and administrative processes. "
+    "It applies to all campuses and is a key reference for student life and academic expectations."
 )
+
 
 # Query function using chat-style messages
 def query_huggingface_chat(prompt: str, system_message: str = system_instructions) -> str:
